@@ -16,3 +16,9 @@ If possible use infrastracture elk stack and update `.env` file with `ELASTIC_ST
 
 Otherwise run `docker-compose -f docker-compose-elk.yaml up -d` in `docker/` dir for local elastic stack, kibana will be accessable on `http://localhost:5601`
 (be patient, elastic stack on development machines takes time to start)
+
+
+## Tests
+
+Application will force to use separate database connection defined with `MONGO_TESTS_CONNECTION_STRING` env variable to avoid creating and deleting data from dev/prod databases
+There is separate `docker-compose` file for tests env, usable for local development and automated tasks. It can be run with `docker-compose -f docker-compose-tests.yaml up -d` in `docker/` dir
