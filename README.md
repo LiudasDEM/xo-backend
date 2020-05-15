@@ -15,4 +15,4 @@ Elastic stack has separate `docker-compose` file because it uses a lot of resour
 If possible use infrastracture elk stack and update `.env` file with `ELASTIC_STACK_LOGSTASH_HOST` key
 
 Otherwise run `docker-compose -f docker-compose-elk.yaml up -d` in `docker/` dir for local elastic stack, kibana will be accessable on `http://localhost:5601`
-(be patient, elastic stack of development machines takes time to start)
+(be patient, elastic stack on development machines takes time to start)

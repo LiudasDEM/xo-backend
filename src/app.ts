@@ -2,13 +2,14 @@ import express, { Request, Response, NextFunction } from 'express'
 
 import './mongoose'
 import logger from './logger'
+import routes from './routes'
+
 
 const app = express()
 
 
-app.get('/api/health', function (req, res) {
-	res.json(require('os').hostname())
-})
+app.set('trust proxy', '127.0.0.1')
+app.use('/api', routes)
 
 
 app.use((req, res, next) => {
