@@ -1,5 +1,8 @@
 import mongoose from 'mongoose'
+
+
 import config from '../config'
+import logger from './logger'
 
 
 mongoose
@@ -9,8 +12,8 @@ mongoose
 		useCreateIndex: true,
 		useFindAndModify: false,
 	})
-	.then(() => { console.info('mongo connected') })
-	.catch(() => { console.error('mongo failed to connect') })
+	.then(() => { logger.info('mongo connected') })
+	.catch(err => { logger.error('mongo failed to connect', { error: err }) })
 
 
 export default mongoose
