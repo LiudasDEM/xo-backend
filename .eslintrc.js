@@ -38,5 +38,6 @@ module.exports = {
 		'require-atomic-updates': [0],
 		'@typescript-eslint/interface-name-prefix': ['error', { 'prefixWithI': 'always' }],
 		'@typescript-eslint/no-explicit-any': 'off',
+		'@typescript-eslint/ban-ts-ignore': 'off',
 	},
 }
