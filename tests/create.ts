@@ -72,7 +72,6 @@ export function mapEventToTestDTO(event: IEventModel): IEvent {
 		column: event.column,
 		game: event.game.toString(),
 		createdAt: event.createdAt ? new Date(event.createdAt) : event.createdAt,
-		modifiedAt: event.modifiedAt ? new Date(event.modifiedAt) : event.modifiedAt,
 	}
 }
 

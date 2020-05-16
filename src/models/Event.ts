@@ -3,9 +3,9 @@ import { Schema, Document, Model, model } from 'mongoose'
 
 export interface IEvent {
 	action: 'checked' | 'started' | 'finished';
-	player: string;
-	row: number;
-	column: number;
+	player?: string;
+	row?: number;
+	column?: number;
 	game: any;
 	createdAt?: Date;
 	modifiedAt?: Date;
