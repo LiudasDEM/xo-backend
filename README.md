@@ -22,3 +22,7 @@ Otherwise run `docker-compose -f docker-compose-elk.yaml up -d` in `docker/` dir
 
 Application will force to use separate database connection defined with `MONGO_TESTS_CONNECTION_STRING` env variable to avoid creating and deleting data from dev/prod databases
 There is separate `docker-compose` file for tests env, usable for local development and automated tasks. It can be run with `docker-compose -f docker-compose-tests.yaml up -d` in `docker/` dir
+
+## Build
+
+in project root run `docker-compose up -d` to start complete project server side stack: elk, mongo and xo-backend itself
