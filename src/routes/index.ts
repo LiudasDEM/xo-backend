@@ -1,7 +1,6 @@
 import express from 'express'
 
 
-import error from './error'
 import games from './games'
 import events from './events'
 
@@ -14,7 +13,6 @@ router.get('/health', function (req, res) {
 })
 
 
-router.use('/error', error)
 router.use('/events', events)
 router.use('/games', games)
 
