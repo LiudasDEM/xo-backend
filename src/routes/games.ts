@@ -86,7 +86,7 @@ router.get('/:id/events', wrap(async function (req, res) {
 
 
 router.delete('/:id', wrap(async function (req, res) {
-	const game = await gameService.getOne({ id: req.params.id, lean: true, restApi: true })
+	const game = await gameService.getOne({ id: req.params.id, lean: false, restApi: true })
 
 	await game.remove();
 
